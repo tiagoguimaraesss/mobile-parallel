@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Smoke Tests" parallel="tests" thread-count="3">
+   
+   <test name="Google Nexus 5 - 5.1.0">
+        <parameter name="udid" value="192.168.208.101:5555"/>
+        <parameter name="platformVersion" value="5.1.0"/>
+        <parameter name="systemPort" value="8200"/>
+        <parameter name="deviceName" value="Google Nexus 5 - 5.1.0"/>
+        <classes>
+			<class name="br.com.tiago.test.SmokeTest" />
+		</classes>
+   </test>
+   
+   <test name="Google Nexus 5 - 6.0.0">
+        <parameter name="udid" value="192.168.208.102:5555"/>
+        <parameter name="platformVersion" value="6.0.0"/>
+        <parameter name="systemPort" value="8201"/>
+        <parameter name="deviceName" value="Google Nexus 5 - 6.0.0"/>
+        <classes>
+			<class name="br.com.tiago.test.SmokeTest" />
+		</classes>
+    </test>
+   
+   <test name="Google Nexus 5X - 7.0">
+        <parameter name="udid" value="192.168.208.103:5555"/>
+        <parameter name="platformVersion" value="7.0"/>
+        <parameter name="systemPort" value="8202"/>
+        <parameter name="deviceName" value="Google Nexus 5X - 7.0"/>
+        <classes>
+			<class name="br.com.tiago.test.SmokeTest" />
+		</classes>
+   </test>
+	
+</suite>

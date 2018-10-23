@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Smoke Tests" duration-ms="55600" started-at="2018-10-23T01:49:24Z" finished-at="2018-10-23T01:50:20Z">
+    <groups>
+    </groups>
+    <test name="Google Nexus 5 - 6.0.0" duration-ms="50287" started-at="2018-10-23T01:49:24Z" finished-at="2018-10-23T01:50:14Z">
+      <class name="br.com.tiago.test.SmokeTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, int, java.lang.String)[pri:0, instance:br.com.tiago.test.SmokeTest@3224f60b]" name="setUp" is-config="true" duration-ms="43060" started-at="2018-10-23T01:49:24Z" finished-at="2018-10-23T01:50:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[192.168.208.102:5555]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[6.0.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[8201]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Google Nexus 5 - 6.0.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="justATest()[pri:0, instance:br.com.tiago.test.SmokeTest@3224f60b]" name="justATest" duration-ms="6192" started-at="2018-10-23T01:50:07Z" finished-at="2018-10-23T01:50:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- justATest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:br.com.tiago.test.SmokeTest@3224f60b]" name="tearDown" is-config="true" duration-ms="1007" started-at="2018-10-23T01:50:13Z" finished-at="2018-10-23T01:50:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- br.com.tiago.test.SmokeTest -->
+    </test> <!-- Google Nexus 5 - 6.0.0 -->
+    <test name="Google Nexus 5 - 5.1.0" duration-ms="54213" started-at="2018-10-23T01:49:24Z" finished-at="2018-10-23T01:50:18Z">
+      <class name="br.com.tiago.test.SmokeTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, int, java.lang.String)[pri:0, instance:br.com.tiago.test.SmokeTest@67b92f0a]" name="setUp" is-config="true" duration-ms="47682" started-at="2018-10-23T01:49:24Z" finished-at="2018-10-23T01:50:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[192.168.208.101:5555]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[5.1.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[8200]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Google Nexus 5 - 5.1.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="justATest()[pri:0, instance:br.com.tiago.test.SmokeTest@67b92f0a]" name="justATest" duration-ms="5266" started-at="2018-10-23T01:50:12Z" finished-at="2018-10-23T01:50:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- justATest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:br.com.tiago.test.SmokeTest@67b92f0a]" name="tearDown" is-config="true" duration-ms="1247" started-at="2018-10-23T01:50:17Z" finished-at="2018-10-23T01:50:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- br.com.tiago.test.SmokeTest -->
+    </test> <!-- Google Nexus 5 - 5.1.0 -->
+    <test name="Google Nexus 5X - 7.0" duration-ms="55600" started-at="2018-10-23T01:49:24Z" finished-at="2018-10-23T01:50:20Z">
+      <class name="br.com.tiago.test.SmokeTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, int, java.lang.String)[pri:0, instance:br.com.tiago.test.SmokeTest@30b8a058]" name="setUp" is-config="true" duration-ms="46637" started-at="2018-10-23T01:49:24Z" finished-at="2018-10-23T01:50:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[192.168.208.103:5555]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[8202]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Google Nexus 5X - 7.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="justATest()[pri:0, instance:br.com.tiago.test.SmokeTest@30b8a058]" name="justATest" duration-ms="8331" started-at="2018-10-23T01:50:11Z" finished-at="2018-10-23T01:50:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- justATest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:br.com.tiago.test.SmokeTest@30b8a058]" name="tearDown" is-config="true" duration-ms="616" started-at="2018-10-23T01:50:19Z" finished-at="2018-10-23T01:50:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- br.com.tiago.test.SmokeTest -->
+    </test> <!-- Google Nexus 5X - 7.0 -->
+  </suite> <!-- Smoke Tests -->
+</testng-results>
