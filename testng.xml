@@ -1,8 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Smoke Tests" parallel="tests" thread-count="3">
-   
-   <test name="Google Nexus 5 - 5.1.0">
+
+    <parameter name="appiumServerUrl" value="http://127.0.0.1:4723/wd/hub"/>
+
+    <test name="Google Nexus 5 - 5.1.0">
         <parameter name="udid" value="192.168.208.101:5555"/>
         <parameter name="platformVersion" value="5.1.0"/>
         <parameter name="systemPort" value="8200"/>
