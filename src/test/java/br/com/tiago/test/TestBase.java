@@ -7,7 +7,7 @@ import org.testng.annotations.Parameters;
 import br.com.tiago.config.DeviceConfig;
 import io.appium.java_client.AppiumDriver;
 
-public class BaseTest {
+public class TestBase {
 	
 	protected AppiumDriver<?> driver;
 	protected DeviceConfig device = new DeviceConfig();
