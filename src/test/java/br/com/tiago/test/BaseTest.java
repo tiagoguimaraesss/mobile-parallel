@@ -13,9 +13,9 @@ public class BaseTest {
 	protected DeviceConfig device = new DeviceConfig();
 	
 	@BeforeClass
-	@Parameters({"udid", "platformVersion", "systemPort", "deviceName"})
-	public void setUp(String udid, String platformVersion, int systemPort, String deviceName) throws Exception {
-		driver = device.androidCapabilities(udid, platformVersion, systemPort, deviceName);
+	@Parameters({"udid", "platformVersion", "systemPort", "deviceName", "appiumServerUrl"})
+	public void setUp(String udid, String platformVersion, int systemPort, String deviceName, String appiumServerUrl) throws Exception {
+		driver = device.androidCapabilities(udid, platformVersion, systemPort, deviceName, appiumServerUrl);
 	}
 
 	@AfterMethod
