@@ -7,15 +7,15 @@ import org.testng.annotations.Parameters;
 import br.com.tiago.config.DeviceConfig;
 import io.appium.java_client.AppiumDriver;
 
-public class BaseTest {
+public class TestBase {
 	
 	protected AppiumDriver<?> driver;
 	protected DeviceConfig device = new DeviceConfig();
 	
 	@BeforeClass
-	@Parameters({"udid", "platformVersion", "systemPort", "deviceName"})
-	public void setUp(String udid, String platformVersion, int systemPort, String deviceName) throws Exception {
-		driver = device.androidCapabilities(udid, platformVersion, systemPort, deviceName);
+	@Parameters({"udid", "platformVersion", "systemPort", "deviceName", "appiumServerUrl"})
+	public void setUp(String udid, String platformVersion, int systemPort, String deviceName, String appiumServerUrl) throws Exception {
+		driver = device.androidCapabilities(udid, platformVersion, systemPort, deviceName, appiumServerUrl);
 	}
 
 	@AfterMethod
