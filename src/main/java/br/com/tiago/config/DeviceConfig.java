@@ -26,7 +26,7 @@ public class DeviceConfig {
 		capabilities.setCapability(MobileCapabilityType.UDID, udid);
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 		
-		return new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		return new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
 	}
 	
 }
