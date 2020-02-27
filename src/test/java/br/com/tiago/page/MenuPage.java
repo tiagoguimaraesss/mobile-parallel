@@ -1,12 +1,12 @@
 package br.com.tiago.page;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class MenuPage extends PageObject{
 
-	public MenuPage(AppiumDriver<?> driver) {
+	public MenuPage(AndroidDriver<MobileElement> driver) {
 		super(driver);
 	}
 	

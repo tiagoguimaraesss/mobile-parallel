@@ -10,8 +10,8 @@ public class SmokeTest extends TestBase {
 
     @Test
     public void justATest() {
+    	final String name = "Tiago", age = "25";
         MenuPage menu = new MenuPage(driver);
-        final String name = "Tiago", age = "25";
 
         SuccessPage success = menu.inputUserInfo(name, age);
         assertEquals(String.format("Your name is %s and you are %s years old!", name, age), success.messageViewGetText());

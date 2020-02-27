@@ -1,12 +1,12 @@
 package br.com.tiago.page;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class SuccessPage extends PageObject{
 
-	public SuccessPage(AppiumDriver<?> driver) {
+	public SuccessPage(AndroidDriver<MobileElement> driver) {
 		super(driver);
 	}
 	
