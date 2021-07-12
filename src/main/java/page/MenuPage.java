@@ -1,8 +1,9 @@
-package br.com.tiago.page;
+package page;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import modelo.Pessoa;
 
 public class MenuPage extends PageObject{
 
@@ -10,18 +11,18 @@ public class MenuPage extends PageObject{
 		super(driver);
 	}
 	
-	@AndroidFindBy(id = "br.com.lucasbieniek.aat:id/textInputEditTextName")
+	@AndroidFindBy(id = "textInputEditTextName")
 	private MobileElement nameEditText;
 	
-	@AndroidFindBy(id = "br.com.lucasbieniek.aat:id/textInputEditTextAge")
+	@AndroidFindBy(id = "textInputEditTextAge")
 	private MobileElement ageEditText;
 	
-	@AndroidFindBy(id = "br.com.lucasbieniek.aat:id/btnOk")
+	@AndroidFindBy(id = "btnOk")
 	private MobileElement nextButton;
 	
-	public SuccessPage inputUserInfo(String name, String age) {
-		nameEditText.sendKeys(name);
-		ageEditText.sendKeys(age);
+	public SuccessPage inputUserInfo(Pessoa pessoa) {
+		nameEditText.sendKeys(pessoa.getName());
+		ageEditText.sendKeys(pessoa.getAge());
 		nextButton.click();
 		
 		return new SuccessPage(driver);

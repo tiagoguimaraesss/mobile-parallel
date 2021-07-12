@@ -1,41 +1,43 @@
-<h1><b>PROJETO AUTOMAÇÃO DE TESTE MOBILE EM PARALELO COM APPIUM</b></h1>
+# Automação de Teste Mobile em Paralelo com Appium
 
 Projeto para automação de testes mobile com execução em paralelo utilizando a biblioteca de testes automatizados mobile Appium.
 
-<h2><b>FRAMEWORKS E BIBLIOTECAS UTILIZADAS</b></h2>
+## Tecnologias Utilizadas
 
-<b>TestNG</b> http://testng.org/doc/
+- [**Appium**](http://appium.io/), como biblioteca para automação de teste _mobile_ :white_check_mark:
+- [**Java**](https://openjdk.java.net/), como linguagem de programação :coffee:
+- [**Java-client**](https://github.com/appium/java-client), como biblioteca com implementação do _client_ para o **Appium** :coffee:
+- [**Lombok**](https://projectlombok.org/), como biblioteca para trabalhar com POJO :wrench:  
+- [**Maven**](https://maven.apache.org/), como gerenciador de dependências :wrench:
+- [**TestNG**](https://testng.org/doc/), como _framework_ de teste :white_check_mark:
 
-<b>Appium server</b> http://appium.io/
+| :exclamation:  A configuração de cada biblioteca/ferramenta/_framework_ citada pode ser realizada seguindo os passos que se pede na página oficial de cada uma.|
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-<b>java-client</b> https://github.com/appium/java-client
+| :memo:        | Para configuração das variáveis de ambiente, seguir os passos descritos conforme [**este artigo no Medium**](https://medium.com/beelabsolutions/configurando-vari%C3%A1veis-de-ambiente-java-home-e-maven-home-no-windows-e-unix-d9461f783c26).       |
+|---------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-<b>Genymotion versão free for personal use</b> https://www.genymotion.com/fun-zone/
+## Configuração do .xml do TestNG para Execução em Paralelo
+Para que seja possível identificar as capacidades de sessão de automação que irá executar os testes específicados na suíte de testes do TestNG, é necessário informar por parâmetro:
 
-<b>Gerenciador de dependências Maven</b> https://maven.apache.org/
+- `deviceName`: Nome do dispositivo
+- `udid`: Identificador único do dispositivo
+- `systemPort`: No caso de utilização do UiAutomator2 é necessário informar uma porta de sistema diferente para cada sessão de Android que deseja iniciar
 
-A configuração de cada ferramenta citada, pode ser realizada seguindo os passos que se pede na página oficial de cada.
-
-Para configuração das variáveis de ambiente, seguir os passos descritos conforme [este artigo no Medium](https://medium.com/beelabsolutions/configurando-vari%C3%A1veis-de-ambiente-java-home-e-maven-home-no-windows-e-unix-d9461f783c26).
-
-<h2><b>CONFIGURAÇÃO DO XML DO TESTNG PARA EXECUÇÃO DE TESTES EM PARALELO</b></h2>
-
-Para que seja possível identificar as capacidades do dispositivo que irá executar os testes específicados nas suítes de testes do TestNG, é necessário passar por parâmetro:
-	- udid: Identificador único do dispositivo
-	- platformVersion: Versão do sistema operacional do dispositivo
-	- systemPort: No caso de utilização do uiautomator2, é necessário informar uma porta de sistema diferente para cada sessão de Android que deseja iniciar, quando diferentes portas não são utilizadas, em alguns momentos entra em conflito interrompendo a automação
-	- deviceName: Nome do dispositivo
+| :warning: CUIDADO          |
+|:---------------------------|
+| Para _capability_ `systemPort`, quando portas iguais são utilizadas para mais de um dispositivo, em alguns momentos entra em conflito interrompendo a automação      |
 
 ```
-<suite name="Suite Name" parallel="tests" thread-count="N">
+<suite name="Suite Name" parallel="tests" thread-count="5">
    
-   <test name="Execution name">
-        <parameter name="udid" value="udid number"/>
-        <parameter name="platformVersion" value="SO version"/>
+   <test name="Teste de Login Válido">
+   		<parameter name="deviceName" value="Google Pixel 5X"/>
+        <parameter name="udid" value="asdjio8924jkdsa"/>
         <parameter name="systemPort" value="8200"/>
-        <parameter name="deviceName" value="Device name"/>
+        
         <classes>
-			<class name="Test class path" />
+			<class name="path-to-test-class" />
 		</classes>
    </test>
 
@@ -43,16 +45,13 @@ Para que seja possível identificar as capacidades do dispositivo que irá executa
 
 ```
 
-As demais ações para realização dos testes, estão disponíveis no código neste mesmo repositório.
+As demais ações para realização dos testes estão disponíveis nos fontes neste mesmo repositório.
 
-Materiais de apoio e _links_ importantes:
+## Materiais de Apoio e _Links_ Importantes
 
-- [Apresentação no YouTube](https://www.youtube.com/watch?v=03jCYtxBa10)
+- [**Apresentação no YouTube**](https://www.youtube.com/watch?v=03jCYtxBa10)
+- [**Artigo sobre esta proposta de arquitetura**](https://medium.com/@tiagoguimaraesss/utilizando-appium-e-testng-como-alternativa-para-execu%C3%A7%C3%A3o-em-paralelo-de-testes-mobile-2ca99e505307)
+- [**Artigo sobre config. das variáveis de ambiente**](https://medium.com/beelabsolutions/configurando-vari%C3%A1veis-de-ambiente-java-home-e-maven-home-no-windows-e-unix-d9461f783c26)
+- [**Apresentação no SlideShare**](https://www.slideshare.net/TiagoGuimaresdaSilva/utilizando-appium-e-testng-como-alternativa-para-execuo-de-testes-mobile-em-paralelo)
 
-- [Artigo sobre está opção de arquitetura](https://medium.com/@tiagoguimaraesss/utilizando-appium-e-testng-como-alternativa-para-execu%C3%A7%C3%A3o-em-paralelo-de-testes-mobile-2ca99e505307)
-
-- [Artigo sobre config. das variáveis de ambiente](https://medium.com/beelabsolutions/configurando-vari%C3%A1veis-de-ambiente-java-home-e-maven-home-no-windows-e-unix-d9461f783c26)
-
-- [Apresentação no SlideShare](https://www.slideshare.net/TiagoGuimaresdaSilva/utilizando-appium-e-testng-como-alternativa-para-execuo-de-testes-mobile-em-paralelo)
-
-Bom teste ;)
+Bom teste :blush:

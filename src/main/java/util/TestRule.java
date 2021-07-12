@@ -1,25 +1,24 @@
-package br.com.tiago.test;
+package util;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-import br.com.tiago.config.AppiumSessionConfig;
+import config.AppiumSessionConfig;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
-public class TestBase {
+public class TestRule {
 	
 	protected AndroidDriver<MobileElement> driver;
-	protected AppiumSessionConfig device = new AppiumSessionConfig();
-	
+
 	@BeforeClass
 	@Parameters({"deviceName", "udid", "systemPort", "appiumServerUrl"})
 	public void setUp(String deviceName, String udid, int systemPort, String appiumServerUrl) throws Exception {
-		driver = device.getAndroidDriverSession(deviceName, udid, systemPort, appiumServerUrl);
+		driver = new AppiumSessionConfig().getAndroidDriverSession(deviceName, udid, systemPort, appiumServerUrl);
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		driver.quit();
 	}

@@ -1,4 +1,4 @@
-package br.com.tiago.page;
+package page;
 
 import java.time.Duration;
 
