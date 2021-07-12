@@ -1,4 +1,4 @@
-package br.com.tiago.config;
+package config;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;

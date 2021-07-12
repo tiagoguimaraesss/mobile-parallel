@@ -1,8 +1,9 @@
 package br.com.tiago.test;
 
-import br.com.tiago.page.MenuPage;
-import br.com.tiago.page.SuccessPage;
+import page.MenuPage;
+import page.SuccessPage;
 import org.testng.annotations.Test;
+import util.TestBase;
 
 import static org.testng.Assert.assertEquals;
 

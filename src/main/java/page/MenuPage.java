@@ -1,4 +1,4 @@
-package br.com.tiago.page;
+package page;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
