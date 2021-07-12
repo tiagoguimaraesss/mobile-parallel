@@ -3,6 +3,7 @@ package page;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import modelo.Pessoa;
 
 public class MenuPage extends PageObject{
 
@@ -19,9 +20,9 @@ public class MenuPage extends PageObject{
 	@AndroidFindBy(id = "btnOk")
 	private MobileElement nextButton;
 	
-	public SuccessPage inputUserInfo(String name, String age) {
-		nameEditText.sendKeys(name);
-		ageEditText.sendKeys(age);
+	public SuccessPage inputUserInfo(Pessoa pessoa) {
+		nameEditText.sendKeys(pessoa.getName());
+		ageEditText.sendKeys(pessoa.getAge());
 		nextButton.click();
 		
 		return new SuccessPage(driver);

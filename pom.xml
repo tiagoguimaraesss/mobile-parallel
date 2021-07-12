@@ -12,6 +12,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.surefire.version>2.22.2</maven.surefire.version>
 		<java.client.version>7.5.1</java.client.version>
+		<lombok.version>1.18.20</lombok.version>
 		<testng.version>7.4.0</testng.version>
 	</properties>
 
@@ -52,6 +53,14 @@
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
 			<version>${java.client.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
