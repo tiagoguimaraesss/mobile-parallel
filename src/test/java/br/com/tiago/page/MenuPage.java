@@ -10,13 +10,13 @@ public class MenuPage extends PageObject{
 		super(driver);
 	}
 	
-	@AndroidFindBy(id = "br.com.lucasbieniek.aat:id/textInputEditTextName")
+	@AndroidFindBy(id = "textInputEditTextName")
 	private MobileElement nameEditText;
 	
-	@AndroidFindBy(id = "br.com.lucasbieniek.aat:id/textInputEditTextAge")
+	@AndroidFindBy(id = "textInputEditTextAge")
 	private MobileElement ageEditText;
 	
-	@AndroidFindBy(id = "br.com.lucasbieniek.aat:id/btnOk")
+	@AndroidFindBy(id = "btnOk")
 	private MobileElement nextButton;
 	
 	public SuccessPage inputUserInfo(String name, String age) {

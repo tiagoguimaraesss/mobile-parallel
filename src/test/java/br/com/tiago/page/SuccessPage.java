@@ -10,7 +10,7 @@ public class SuccessPage extends PageObject{
 		super(driver);
 	}
 	
-	@AndroidFindBy(id = "br.com.lucasbieniek.aat:id/tvResult")
+	@AndroidFindBy(id = "tvResult")
 	private MobileElement messageTextView;
 	
 	public String messageViewGetText() {
