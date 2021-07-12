@@ -3,7 +3,9 @@ package page;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import lombok.Getter;
 
+@Getter
 public class SuccessPage extends PageObject{
 
 	public SuccessPage(AndroidDriver<MobileElement> driver) {
@@ -12,9 +14,5 @@ public class SuccessPage extends PageObject{
 	
 	@AndroidFindBy(id = "tvResult")
 	private MobileElement messageTextView;
-	
-	public String messageViewGetText() {
-		return messageTextView.getText();
-	}
 	
 }

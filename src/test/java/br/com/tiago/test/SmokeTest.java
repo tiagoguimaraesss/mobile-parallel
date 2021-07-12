@@ -17,7 +17,7 @@ public class SmokeTest extends TestRule {
         MenuPage menu = new MenuPage(driver);
 
         SuccessPage success = menu.inputUserInfo(tiago);
-        assertEquals(format("Your name is %s and you are %s years old!", tiago.getName(), tiago.getAge()), success.messageViewGetText());
+        assertEquals(format("Your name is %s and you are %s years old!", tiago.getName(), tiago.getAge()), success.getMessageTextView().getText());
     }
 
 }
